@@ -1,0 +1,91 @@
+
+
+<div class="Title">
+    <h1 >Agregar País</h1>
+    <mat-divider></mat-divider>
+ </div>
+<br>
+<div>
+    <form [formGroup]="newPaisForm" (ngSubmit)="ValidarFormulario()">
+        <div class="Form">
+            <div class="Box">
+                <h2> Id</h2>
+                <mat-form-field class="Form-field" appearance="fill">
+                    <mat-label>Id</mat-label>
+                    <input matInput required formControlName="Id">
+                    <mat-error *ngIf="newPaisForm.invalid">
+                        Debe diligenciar el campo
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br> 
+            <div class="Box">
+                <h2> Nombre</h2>
+                <mat-form-field class="Form-field" appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput required formControlName="Nombre">
+                    <mat-error *ngIf="newPaisForm.invalid">
+                        Debe diligenciar el campo
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br> 
+            <div class="Box">
+                <h2>Población</h2>
+                <mat-form-field  class="Form-field" appearance="fill">
+                    <mat-label>Población</mat-label>
+                    <input matInput required formControlName="Poblacion">
+                    <mat-error *ngIf="newPaisForm.invalid">
+                        Debe diligenciar el campo
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br> 
+            <div class="Box">
+                <h2>Capital</h2>
+                <mat-form-field class="Form-field" appearance="fill">
+                    <mat-label>Capital</mat-label>
+                    <input  matInput required formControlName="Capital">
+                    <mat-error *ngIf="newPaisForm.invalid">
+                        Debe diligenciar el campo
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br> 
+            <div class="Box">
+                <h2>Nombre del continente</h2>
+                <mat-form-field class="Form-field" appearance="fill">
+                    <mat-label>Nombre del continente</mat-label>
+                    <input matInput required formControlName="NombreContinente">
+                    <mat-error *ngIf="newPaisForm.invalid">
+                        Debe diligenciar el campo
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br> 
+            <div class="Box">
+                <h2> Url imagen</h2>
+                <mat-form-field class="Form-field" appearance="fill">
+                    <mat-label>Url imagen</mat-label>
+                    <input matInput required formControlName="UrlImagen">
+                    <mat-error *ngIf="newPaisForm.invalid">
+                        Debe diligenciar el campo
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <br> 
+        </div>
+        <mat-card-actions>
+            <div style="display: flex; margin-left: 670px;">
+                <div>
+                    <button class="Button" type="submit" mat-raised-button color="primary">Guardar</button>
+                </div>
+                <div style="margin-left: 20px;">
+                    <button class="Button2" mat-button routerLink="/paises">Atrás</button>
+                </div>
+            </div>
+        </mat-card-actions>
+    </form>
+    <!-- <mat-card class="Card">
+    </mat-card> -->
+</div>

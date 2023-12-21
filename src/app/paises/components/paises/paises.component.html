@@ -1,0 +1,48 @@
+<div class="Title">
+    <h1 >Países</h1>
+ </div>
+<div class="Button">
+    <button mat-raised-button color="primary" routerLink="/new">Agregar País</button>
+</div>
+<hr class="Division">
+<div class="Tarjetas">
+    <div class="Tarjeta" *ngFor="let item of paises">
+        <mat-card>
+            <mat-card-header>
+                <img mat-card-image class="Image" src={{item.img}} alt="Photo of a Shiba Inu">
+            </mat-card-header>
+            <br>
+            <mat-divider></mat-divider>
+        
+            <mat-card-content>
+                 <br>
+                <h2>{{item.countryName}}</h2>
+                <mat-divider></mat-divider>
+                <h3>Continente: {{item.continentName}}</h3>
+                <mat-divider></mat-divider>
+                <h3>Población: {{item.population}}</h3>
+                <mat-divider></mat-divider>
+                <h3>Capital: {{item.capital}}</h3> 
+
+                <!-- <mat-card>
+                    <mat-card-content>Continente: {{item.continentName}}</mat-card-content>
+                </mat-card>
+                <mat-card>
+                    <mat-card-content>Población: {{item.population}}</mat-card-content>
+                </mat-card>
+                <mat-card>
+                    <mat-card-content>Capital: {{item.capital}}</mat-card-content>
+                </mat-card> -->
+
+            </mat-card-content>
+            <mat-card-actions>
+                <div> 
+                    <button mat-raised-button color="warn" (click)="eliminarPais(item.id)">Eliminar</button>
+                </div>
+                
+                
+            </mat-card-actions>
+        </mat-card>
+    
+    </div>
+</div>
